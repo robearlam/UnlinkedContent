@@ -8,7 +8,7 @@ namespace UnlinkedContent.Business.Services
     {
         public static IList<Item> GetUnlinkedContent()
         {
-            var contentItem = Sitecore.Context.Database.GetItem(Constants.ContentIds.ContentNode);
+            var contentItem = Sitecore.Context.Database.GetItem(Constants.ContentIds.SitecoreNode);
             return Sitecore.Globals.LinkDatabase.GetReferrers(contentItem)
                 .Select(i => i.GetSourceItem())
                 .Where(i => i != null)

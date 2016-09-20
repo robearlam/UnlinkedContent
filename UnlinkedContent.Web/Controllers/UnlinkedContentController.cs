@@ -6,6 +6,7 @@ namespace UnlinkedContent.Web.Controllers
 {
     public class UnlinkedContentController : Controller
     {
+        [HttpGet]
         public ActionResult ShowUnlinkedContent()
         {
             return View(GenerateUnlinkedContentModel());
