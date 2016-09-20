@@ -1,0 +1,16 @@
+﻿@model UnlinkedContent.Business.Model.UnlinkedContentModel
+
+<div>
+    <h1>Show UnLinked Content</h1>
+    
+    <ul>
+        @foreach (var unlinkedContent in Model.UnLinkedContent)
+        {
+            <li>
+                @unlinkedContent.ID.ToString()
+                @unlinkedContent.Name
+                @unlinkedContent.Paths.FullPath
+            </li>
+        }
+    </ul>
+</div>
